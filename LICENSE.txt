@@ -1,0 +1,42 @@
+NGOMANE INVESTMENT GROUP
+Website Source Code License
+Copyright (c) 2026 Ngomane Investment Group. All Rights Reserved.
+
+1. Ownership
+   All source code, design elements, layouts, graphics, branding, and written content contained within this website are the intellectual property of Ngomane Investment Group unless otherwise stated.
+
+2. Permitted Use
+   Visitors are permitted to:
+
+* Access and view the website through a web browser.
+* Download or print materials strictly for personal and non-commercial use.
+* Share links to the website.
+
+3. Restrictions
+   Without prior written permission from Ngomane Investment Group, you may NOT:
+
+* Copy, reproduce, or redistribute the website source code.
+* Republish the website design or structure on another site.
+* Use the branding, logo, or identity of Ngomane Investment Group.
+* Modify, sell, license, or commercially exploit any part of this website.
+
+4. Third-Party Assets
+   Some fonts, libraries, or frameworks used on this website may be governed by their respective open-source licenses. Those licenses remain the property of their original authors.
+
+5. Disclaimer
+   The information provided on this website is for general informational purposes only. Ngomane Investment Group makes no guarantees regarding completeness, reliability, or accuracy of the information.
+
+6. Limitation of Liability
+   Under no circumstances shall Ngomane Investment Group be liable for any loss or damages resulting from the use of this website.
+
+7. Changes to License
+   Ngomane Investment Group reserves the right to modify this license at any time without prior notice.
+
+8. Contact
+   For licensing inquiries, permissions, or partnerships please contact:
+
+Ngomane Investment Group
+Email: [info@ngomanewealth.co.za](mailto:info@ngomanewealth.co.za)
+South Africa
+
+END OF LICENSE

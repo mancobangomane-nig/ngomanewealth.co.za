@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ngomane Investment Group | Enterprise AI & GRC Advisory</title>
+    
+    <!-- SEO Meta Optimization -->
+    <meta name="description" content="South Africa's leading AI advisory for SMEs. Specialized in AI Readiness, Applied Automation, and POPIA-aligned Governance (GRC).">
+    <meta name="keywords" content="AI Business Strategy South Africa, POPIA AI Compliance, Enterprise Automation, AI Risk Management, Ngomane Investment Group">
+    <meta name="author" content="Ngomane Investment Group">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- CORE STYLE FIXES --- */
+        :root {
+            --color-readiness: #f59e0b;
+            --color-automation: #10b981;
+            --color-governance: #00d2ff;
+        }
+
+        /* Reveal Animation State */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Navigation Fixes */
+        .glass-nav {
+            transition: all 0.3s ease;
+        }
+        .glass-nav.scrolled {
+            padding: 12px 5%;
+            background: rgba(10, 14, 20, 0.98);
+            backdrop-filter: blur(20px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 6px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 5px;
+            z-index: 1001;
+        }
+        .menu-toggle span {
+            width: 25px; height: 2px;
+            background: white;
+            transition: 0.3s ease;
+            display: block;
+        }
+
+        /* Division Colors & Effects */
+        .service-card {
+            position: relative;
+            overflow: hidden;
+            border-left: 4px solid rgba(255,255,255,0.05);
+            transition: all 0.4s ease;
+        }
+        .card-readiness { border-left-color: var(--color-readiness) !important; }
+        .card-automation { border-left-color: var(--color-automation) !important; }
+        .card-governance { border-left-color: var(--color-governance) !important; }
+
+        .card-readiness .icon-box { color: var(--color-readiness); opacity: 1; }
+        .card-automation .icon-box { color: var(--color-automation); opacity: 1; }
+        .card-governance .icon-box { color: var(--color-governance); opacity: 1; }
+
+        .spotlight {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: radial-gradient(600px circle at var(--x) var(--y), rgba(255,255,255,0.06), transparent 40%);
+            pointer-events: none;
+        }
+
+        /* Footer Layout */
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1.5fr;
+            gap: 50px;
+            padding: 60px 0;
+            text-align: left;
+        }
+        .footer-col h4 { color: white; margin-bottom: 20px; font-size: 1.1rem; }
+        .footer-col p, .footer-col ul { font-size: 0.9rem; color: var(--text-dim); line-height: 1.8; list-style: none; }
+        .footer-col ul li { margin-bottom: 10px; }
+        .footer-col a { color: var(--text-dim); text-decoration: none; transition: 0.3s; }
+        .footer-col a:hover { color: var(--accent); }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.05);
+            padding: 30px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .terms-text { font-size: 0.8rem; opacity: 0.6; }
+
+        /* Responsive Navigation */
+        @media (max-width: 768px) {
+            .menu-toggle { display: flex; }
+            .nav-links {
+                position: fixed;
+                top: 0; right: -100%;
+                height: 100vh; width: 80%;
+                background: #0d121a;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+                box-shadow: -10px 0 30px rgba(0,0,0,0.5);
+                z-index: 1000;
+            }
+            .nav-links.active { right: 0; }
+            .nav-links li { margin: 15px 0; }
+            .footer-grid { grid-template-columns: 1fr; gap: 40px; }
+            .footer-bottom { flex-direction: column; text-align: center; gap: 15px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="glass-nav" id="mainNav">
+            <div class="logo">NGOMANE <span>INVESTMENT GROUP</span></div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="nav-item">Home</a></li>
+                <li><a href="#services" class="nav-item">Solutions</a></li>
+                <li><a href="method.html" class="nav-item">Our Method</a></li>
+                <li><a href="about.html" class="nav-item">About</a></li>
+                <li><a href="contact.html" class="nav-cta">Get Started</a></li>
+            </ul>
+            <button class="menu-toggle" id="menuToggle" aria-label="Open Navigation">
+                <span></span><span></span><span></span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Home / Hero -->
+        <section id="home" class="hero-section">
+            <div class="hero-overlay"></div>
+            <div class="container hero-container reveal">
+                <span class="badge">Future-Proof Your Enterprise</span>
+                <h1>Smarter decisions. <br><span class="gradient-text">Responsible AI.</span></h1>
+                <p>We bridge the gap between complex AI innovation and South African regulatory excellence. Applied automation, tailored for growth.</p>
+                <div class="hero-btns">
+                    <a href="contact.html" class="btn-primary">Book Assessment</a>
+                    <a href="#services" class="btn-secondary">Explore Solutions</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Core Divisions Section -->
+        <section id="services" class="section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>Core Divisions</h2>
+                    <p>End-to-end AI integration with specialized risk management.</p>
+                </div>
+                
+                <div class="service-grid">
+                    <a href="ai-readiness.html" class="service-link reveal" style="text-decoration: none; color: inherit;">
+                        <div class="service-card card-readiness">
+                            <div class="spotlight"></div>
+                            <div class="icon-box">01 / ASSESSMENT</div>
+                            <h3>AI Readiness</h3>
+                            <p>In-depth digital maturity auditing and POPIA-aligned opportunity mapping.</p>
+                        </div>
+                    </a>
+
+                    <a href="applied-automation.html" class="service-link reveal" style="text-decoration: none; color: inherit;">
+                        <div class="service-card card-automation">
+                            <div class="spotlight"></div>
+                            <div class="icon-box">02 / DEPLOYMENT</div>
+                            <h3>Applied Automation</h3>
+                            <p>Custom LLM deployments, RAG-based internal knowledge bases, and workflow agents.</p>
+                        </div>
+                    </a>
+
+                    <a href="ai-governance.html" class="service-link reveal" style="text-decoration: none; color: inherit;">
+                        <div class="service-card card-governance">
+                            <div class="spotlight"></div>
+                            <div class="icon-box">03 / ASSURANCE</div>
+                            <h3>AI Governance</h3>
+                            <p>Developing ethical AI frameworks and GRC controls for board-level assurance.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section id="pricing" class="section alt-bg">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>Investment Tiers</h2>
+                    <p>Transparent pricing for high-impact digital transformation.</p>
+                </div>
+                <div class="price-grid">
+                    <div class="price-card reveal">
+                        <h4>Audit</h4>
+                        <div class="price">R10,500<span>/avg</span></div>
+                        <ul>
+                            <li>Readiness Report</li>
+                            <li>Risk Landscape</li>
+                            <li>POPIA Review</li>
+                        </ul>
+                        <a href="contact.html" class="btn-outline">Select</a>
+                    </div>
+                    
+                    <div class="price-card featured reveal">
+                        <div class="pop-tag">Most Popular</div>
+                        <h4>Implement</h4>
+                        <div class="price">R25,000<span>/avg</span></div>
+                        <ul>
+                            <li>Custom AI Chatbot</li>
+                            <li>Process Automation</li>
+                            <li>Team Training</li>
+                        </ul>
+                        <a href="contact.html" class="btn-primary">Select</a>
+                    </div>
+                    
+                    <div class="price-card reveal">
+                        <h4>Retainer</h4>
+                        <div class="price">R12,000<span>/mp</span></div>
+                        <ul>
+                            <li>Ongoing Governance</li>
+                            <li>Monthly Optimization</li>
+                            <li>Priority Support</li>
+                        </ul>
+                        <a href="contact.html" class="btn-outline">Select</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col reveal">
+                    <div class="logo" style="margin-bottom: 20px;">NGOMANE <span>INVESTMENT GROUP</span></div>
+                    <p>South Africa's specialized hybrid advisory firm integrating strategy, governance, and digital automation.</p>
+                </div>
+                <div class="footer-col reveal">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Solutions</a></li>
+                        <li><a href="method.html">Methodology</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col reveal">
+                    <h4>Get In Touch</h4>
+                    <p>Germiston, ZA | +27 81 268 39 54<br>info@ngomanewealth.co.za</p>
+                </div>
+            </div>
+            <div class="footer-bottom reveal">
+                <p>&copy; 2026 Ngomane Investment Group. Empowering African Innovation through Trusted AI.</p>
+                <p class="terms-text">Terms and Conditions Apply.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- LOGIC FIXES -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuToggle = document.getElementById('menuToggle');
+            const navLinks = document.getElementById('navLinks');
+            const spans = menuToggle.querySelectorAll('span');
+
+            // 1. Mobile Menu Logic with Span Animation
+            menuToggle.addEventListener('click', (e) => {
+                e.stopPropagation();
+                navLinks.classList.toggle('active');
+                
+                if(navLinks.classList.contains('active')) {
+                    spans[0].style.transform = 'rotate(45deg) translate(6px, 6px)';
+                    spans[1].style.opacity = '0';
+                    spans[2].style.transform = 'rotate(-45deg) translate(5px, -5px)';
+                } else {
+                    spans.forEach(s => s.style.transform = 'none');
+                    spans[1].style.opacity = '1';
+                }
+            });
+
+            // Close menu when clicking outside
+            document.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                spans.forEach(s => s.style.transform = 'none');
+                spans[1].style.opacity = '1';
+            });
+
+            // 2. Spotlight Movement Fix
+            const cards = document.querySelectorAll('.service-card');
+            cards.forEach(card => {
+                card.addEventListener('mousemove', e => {
+                    const rect = card.getBoundingClientRect();
+                    card.style.setProperty('--x', `${e.clientX - rect.left}px`);
+                    card.style.setProperty('--y', `${e.clientY - rect.top}px`);
+                });
+            });
+
+            // 3. Robust Smooth Scroll Fix (Prevents Crashing)
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    const targetId = this.getAttribute('href');
+                    if(targetId === '#') return;
+
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        e.preventDefault();
+                        const offset = 80;
+                        const bodyRect = document.body.getBoundingClientRect().top;
+                        const elementRect = targetElement.getBoundingClientRect().top;
+                        const elementPosition = elementRect - bodyRect;
+                        const offsetPosition = elementPosition - offset;
+
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // 4. Scroll Reveal
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) entry.target.classList.add('active');
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+            // 5. Header Background Scroll
+            window.addEventListener('scroll', () => {
+                const nav = document.getElementById('mainNav');
+                window.scrollY > 50 ? nav.classList.add('scrolled') : nav.classList.remove('scrolled');
+            });
+        });
+    </script>
+</body>
+</html>
